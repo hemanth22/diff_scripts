@@ -29,5 +29,5 @@ jobs:
       - name: diff stat version1
         run: ./diffstat.sh original.txt reversion.txt
 
-      - name: diff stat version1
+      - name: diff stat version2
         run: ./diffstat2.sh original.txt reversion.txt
