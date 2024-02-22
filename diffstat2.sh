@@ -13,7 +13,7 @@ del_lines=$(cat "/tmp/diff_tmp" | grep '<'- | wc -l)
 
 # ignore diff header (those starting with @@) 
 #at_lines=$(cat "/tmp/diff_tmp" | grep ^@ | wc -l)
-chg_lines=$(cat "/tmp/diff_tmp" | wc -l)
+chg_lines=$(cat "/tmp/diff_tmp" | grep "\s\+|\s\+" | wc -l)
 #chg_lines=$(expr $chg_lines - $add_lines - $del_lines - $at_lines)
 #chg_lines=$(expr $chg_lines - $add_lines - $del_lines)
 
