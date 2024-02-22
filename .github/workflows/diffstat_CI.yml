@@ -25,6 +25,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
+      - name: change script permissions
+        run: chmod 777 diffstat.sh diffstat2.sh original.txt reversion.txt
+
       # Runs a single command using the runners shell
       - name: diff stat version1
         run: ./diffstat.sh original.txt reversion.txt
