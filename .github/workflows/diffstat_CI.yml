@@ -26,7 +26,8 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: diff stat version1
+        run: ./diffstat.sh original.txt reversion.txt
 
-          echo test, and deploy your project.
+      - name: diff stat version1
+        run: ./diffstat2.sh original.txt reversion.txt
